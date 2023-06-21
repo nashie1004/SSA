@@ -10,7 +10,7 @@ export default function LongCard(
       {
         imageOnRight ? (
           <>
-            <div className='cardTexts'>
+            <div className='cardTexts right'>
               <h3>{title}</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet dolor quaerat. Alias et fugit quis at repudiandae aspernatur eos.</p>
             </div>
@@ -23,7 +23,7 @@ export default function LongCard(
             <div className='cardImg'
               style={{backgroundImage: `url(${image.src})`}}>
             </div>
-            <div className='cardTexts'>
+            <div className='cardTexts left'>
               <h3>{title}</h3>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci eveniet dolor quaerat. Alias et fugit quis at repudiandae aspernatur eos.</p>
             </div>

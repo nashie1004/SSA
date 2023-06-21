@@ -6,6 +6,7 @@ $black: black;
 $yellowish: #FFC107;
 $cyanish: #17A2B8;
 $transparentBlack: rgba(0, 0, 0, 0.3);
+$blackish: rgb(0, 2, 17);
 
 *{
   padding: 0;
@@ -95,6 +96,7 @@ main{
   .homeTexts{
     display: grid;
     align-content: center;
+    justify-content: center;
     gap: 1rem;
     padding-inline: 1.5rem;
     padding-bottom: 1.5rem;
@@ -110,9 +112,12 @@ main{
       border-radius: .3rem;
       width: 130px;
       height: 45px;
+      margin-inline: auto;
     }
-    p{
-      width: 50%;
+    p, h1{
+      text-align: center;
+      width: 100%;
+      color: $blackish;
     }
   }
 
@@ -132,7 +137,17 @@ main{
   p:first-of-type{
     margin-inline: auto;
     width: min(100%, 700px);
+  }
 
+  .left{
+    h3,p{
+      text-align: left;
+    }
+  }
+  .right{
+    h3,p{
+      text-align: right;
+    }
   }
   .LongCard{
     margin-inline: auto;
@@ -150,9 +165,7 @@ main{
       p{
         font-weight: 200;
       }
-      h3,p{
-        text-align: right;
-      }
+      
     }
 
     .cardImg{
@@ -167,7 +180,7 @@ main{
 }
 @media only screen and (max-width: 470px) {
   .LongCard{
-    .cardTexts:first-of-type{
+    .cardTexts{
       h3,p{
         text-align: center !important;
       }
@@ -304,6 +317,23 @@ main{
   .SectionOne{
     nav, div:first-of-type{
       padding-inline: 6rem;
+    }
+
+    .homeTexts{
+      justify-content: flex-start;
+      p{
+        width: 50%;
+        color: $black;
+      }
+      h1{
+        color: $black;
+      }
+      h1, button, p{
+        text-align: left;
+      }
+      button{
+        margin: 0;
+      }
     }
   }
   .SectionFour{
