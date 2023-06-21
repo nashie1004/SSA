@@ -56,6 +56,14 @@ $transparentBlack: rgba(0, 0, 0, 0.3);
       background-image: url("../assets/badge.app-store.svg");
     }
   }
+  
+  .logo{
+    width: 50px !important;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../assets/logo1.svg");
+  }
 }
 main{
   min-height: 100vh;
@@ -83,16 +91,8 @@ main{
     gap: 1.7rem;
     padding-inline: 1.5rem;
     justify-content: flex-start;
-
-    #navLogo{
-      display: none;
-      width: 50px;
-      height: 50px;
-      background-repeat: no-repeat;
-      background-image: url("../assets/logo1.svg");
-    }
   }
-  div:first-of-type{
+  .homeTexts{
     display: grid;
     align-content: center;
     gap: 1rem;
@@ -208,19 +208,33 @@ main{
   div{
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.4rem;
     justify-content: center;
 
-    .ActionCard{
+    .yellowish{
+      background: $yellowish;
+    }
+    .cyanish{
       background: $cyanish;
+    }
+
+    .ActionCard{
       border-radius: .8rem;
       padding: 1.5rem;
       flex: 1;
-      box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.2);
+      box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.1);
+      gap: 1.5rem;
 
       div:first-of-type{
         display: grid;
         grid-auto-flow: row;
+
+        .actionCardImg{
+          background-repeat: no-repeat;
+          background-size: contain;
+          min-width: 150px;
+          min-height: 150px;
+        }
 
         p{
           vertical-align: middle;
@@ -261,6 +275,15 @@ main{
 .Footer{
   background: $brownishGray;
 
+  .footerWrap{
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+
+    .logo{
+      min-width: 50px;
+    }
+  }
   h3,p{
     line-height: 1.5;
     color: $white;
