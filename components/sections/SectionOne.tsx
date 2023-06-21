@@ -20,8 +20,8 @@ export default function SectionOne() {
         <button>Get Started</button>
       </div>
       <div className='mobileDownloadBtns'>
-        <div id="googlePlay"></div>
-        <div id="appStore"></div>
+        <div className="googlePlay"></div>
+        <div className="appStore"></div>
       </div>
     </div>
   )

@@ -5,20 +5,24 @@ import product2 from '../../assets/product-smartphone.svg'
 import product3 from '../../assets/product-work.svg'
 
 export interface ILongCard{
+  title: string,
   image: any,
   imageOnRight: boolean
 }
 
 const longCards: ILongCard[] = [
   {
+    title: "Discover",
     image: product1,
     imageOnRight: true
   },
   {
+    title: "Augmented",
     image: product2,
     imageOnRight: false
   },
   {
+    title: "Endless Possibilities",
     image: product3,
     imageOnRight: true
   }

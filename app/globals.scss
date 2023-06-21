@@ -32,6 +32,30 @@ $transparentBlack: rgba(0, 0, 0, 0.3);
     display: none;
     height: 0;
   }
+
+  .mobileDownloadBtns{
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+
+    .googlePlay{
+      cursor: pointer;
+      width: 150px;
+      height: 50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../assets/badge.play-store.svg");
+    }
+    .appStore{
+      cursor: pointer;
+      width: 150px;
+      height: 50px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../assets/badge.app-store.svg");
+    }
+  }
 }
 main{
   min-height: 100vh;
@@ -65,9 +89,7 @@ main{
       width: 50px;
       height: 50px;
       background-repeat: no-repeat;
-      // background-size: contain;
       background-image: url("../assets/logo1.svg");
-      //outline: 1px solid $outline;
     }
   }
   div:first-of-type{
@@ -94,29 +116,12 @@ main{
     }
   }
 
-  .mobileDownloadBtns{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.2rem;
+  div:last-of-type{
     border-top: 1px solid $outline;
     border-bottom: 1px solid $outline;
 
-    #googlePlay{
-      outline: 1px solid $outline;
-      width: 150px;
-      height: 50px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-image: url("../assets/badge.play-store.svg");
-    }
-    #appStore{
-      outline: 1px solid $outline;
-      background-repeat: no-repeat;
-      width: 150px;
-      height: 50px;
-      background-size: contain;
-      background-image: url("../assets/badge.app-store.svg");
+    div:last-of-type{
+      width: 170px;
     }
   }
 }
@@ -152,21 +157,20 @@ main{
 
     .cardImg{
       flex: 1;
-      
-      outline: 1px solid $outline;
+      min-height: 260px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-width: 200px;
     }
   }
 }
 @media only screen and (max-width: 470px) {
   .LongCard{
-    div:first-of-type{
+    .cardTexts:first-of-type{
       h3,p{
         text-align: center !important;
       }
-    }
-    div{
-      display: grid;
-      place-content: center;
     }
   }
 }
@@ -176,7 +180,7 @@ main{
   place-items: center;
 
   background-repeat: no-repeat;
-  background-position: 0% 0%;
+  background-position: 100% 0%;
   background-image: url("../assets/bg-decals2.svg");
 
   div{
@@ -184,14 +188,8 @@ main{
       color: $white;
       text-align: center;
     }
-
-    div{
-      margin-top: 4rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.7rem;
-
-      p{background: $black;}
+    p{
+      padding-bottom: 4rem;
     }
   }
 }
@@ -201,7 +199,6 @@ main{
   background-position: 100% 100%;
   background-image: 
     url("../assets/bg-decals3.svg");
-  position: relative;
 
   h2,p:first-of-type{
     margin-inline: auto;
