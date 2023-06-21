@@ -3,9 +3,9 @@ import Image from 'next/image'
 
 export default function ActionCard() {
   return (
-    <div>
+    <div className='ActionCard'>
       <div>
-        <img src="" alt="todo" />
+        <img src="https://picsum.photos/id/237/200/200" alt="todo" />
         <p>Automation</p>
       </div>
       <div>

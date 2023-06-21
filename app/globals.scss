@@ -5,6 +5,7 @@ $white: white;
 $black: black;
 $yellowish: #FFC107;
 $cyanish: #17A2B8;
+$transparentBlack: rgba(0, 0, 0, 0.3);
 
 *{
   padding: 0;
@@ -20,8 +21,10 @@ $cyanish: #17A2B8;
   }
   h2{
     font-size: 2.5rem;
+    line-height: 1.6;
   }
   p{
+    line-height: 1.6;
     font-size: 1.2rem;
     font-weight: 200;
   }
@@ -34,7 +37,7 @@ main{
   min-height: 100vh;
   display: grid;
   grid-template-rows: 
-    600px 1000px 500px 600px 200px;
+    600px auto 500px auto auto;
 
   & > *{
     outline: 1px dashed $outline;
@@ -47,6 +50,8 @@ main{
 
   nav{
     display: flex;
+    align-items: center;
+    gap: 1.7rem;
   }
   h1, h3{
     font-weight: normal;
@@ -64,7 +69,15 @@ main{
 
   .mobileDownloadBtns{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
     outline: 1px dashed $outline;
+    
+    p{
+      background: $black;
+      color: $white;
+    }
   }
 }
 .SectionTwo{
@@ -73,14 +86,33 @@ main{
   }
   p:first-of-type{
     margin-inline: auto;
-    width: min(100%, 600px);
+    width: min(100%, 700px);
+    margin-bottom: 15%;
   }
   .LongCard{
     margin-inline: auto;
-    width: min(600px, 100%);
+    width: min(700px, 100%);
     display: flex;
-    //flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 6rem;
 
+    div:first-of-type{
+      flex: 1;
+      h3{
+        font-size: 2rem;
+      }
+      p{
+        font-weight: 200;
+      }
+      h3,p{
+        text-align: right;
+      }
+    }
+
+    div:last-of-type{
+      flex: 1;
+      //
+    }
   }
 }
 .SectionThree{
@@ -91,11 +123,91 @@ main{
   div{
     h2, p{
       color: $white;
+      text-align: center;
+    }
+
+    div{
+      margin-top: 4rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.7rem;
+
+      p{background: $black;}
     }
   }
 }
 .SectionFour{
+  padding: 2rem;
+
+  h2,p:first-of-type{
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .ActionCard{
+      display: grid;
+      grid-template-columns: auto 1fr;
+      background: $cyanish;
+      border-radius: .8rem;
+      padding: 1rem;
+      flex: 1;
+      min-width: 500px;
+
+      div:first-of-type{
+        display: grid;
+        grid-auto-flow: row;
+
+        p{
+          vertical-align: middle;
+          height: 30px;
+          background: $transparentBlack;
+          color: $white;
+          font-size: 1rem;
+          font-weight: bold;
+          border-radius: .9rem;
+          padding-inline: .6rem;
+        }
+      }
+
+      div:last-of-type{
+        display: grid;
+        grid-auto-flow: row;
+        align-content: flex-start;
+
+        h3, p, h6{
+          color: $white;
+          text-align: left;
+        }
+        h6{
+          font-size: 1rem;
+          font-weight: normal;
+        }
+        h3{
+          font-size: 2rem;
+        }
+      }
+    }
+  }
 }
 .Footer{
   background: $brownishGray;
+  padding: 2rem;
+
+  h3,p{
+    line-height: 1.5;
+    color: $white;
+  }
+  h3:last-of-type{
+    font-weight: normal;
+  }
+  p{
+    line-height: 2;
+    font-size: .8rem;
+    width: min(40%, 800px);
+  }
 }

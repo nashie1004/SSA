@@ -4,7 +4,7 @@ export default function SectionOne() {
   return (
     <div className='SectionOne'>
       <nav>
-        <h3>Protoapp</h3>
+        <h3>@ Protoapp</h3>
         <a href="#">Home</a>
       </nav>
       <div>

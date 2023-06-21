@@ -7,8 +7,6 @@ export default function SectionFour() {
       <h2>Last Call to Action</h2>
       <p>Another section content goes here</p>
       <br />
-      <p>Lorem, ipsum.</p>
-      <p>Fugit, labore.</p>
       <div>
         <ActionCard />
         <ActionCard />
