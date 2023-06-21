@@ -1,4 +1,4 @@
-$outline: grey;
+$outline: lightgrey;
 $brownishGray: rgb(52,58,64);
 $mainBlue: #2248E2;
 $white: white;
@@ -11,21 +11,46 @@ $cyanish: #17A2B8;
   margin: 0;
   box-sizing: border-box;
 
-  h1,h2,h3,h4,h5,h6{
-    font-weight: normal;
+  a{
+    color: $black;
+    text-decoration: none;
   }
-  a{text-decoration: none;}
+  h1{
+    font-size: 2.8rem;
+  }
+  h2{
+    font-size: 2.5rem;
+  }
+  p{
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
 }
-body{
+next-route-announcer{
+  display: none;
+  height: 0;
+}
+main{
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: 
+    600px 1000px 500px 600px 200px;
 
   & > *{
     outline: 1px dashed $outline;
-    min-height: 400px;
   }
 }
 
 .SectionOne{
+  display: grid;
+  grid-template-rows: auto 1fr 80px;
+
+  nav{
+    display: flex;
+  }
+  h1, h3{
+    font-weight: normal;
+  }
   button{
     padding: .7rem 1rem;
     color: $white;
@@ -36,15 +61,40 @@ body{
     font-size: 1.1rem;
     border-radius: .3rem;
   }
+
+  .mobileDownloadBtns{
+    display: flex;
+    outline: 1px dashed $outline;
+  }
 }
 .SectionTwo{
-  //
+  h2, p{
+    text-align: center;
+  }
+  p:first-of-type{
+    margin-inline: auto;
+    width: min(100%, 600px);
+  }
+  .LongCard{
+    margin-inline: auto;
+    width: min(600px, 100%);
+    display: flex;
+    //flex-wrap: wrap;
+
+  }
 }
 .SectionThree{
   background: $mainBlue;
+  display: grid;
+  place-items: center;
+
+  div{
+    h2, p{
+      color: $white;
+    }
+  }
 }
 .SectionFour{
-  //
 }
 .Footer{
   background: $brownishGray;

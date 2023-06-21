@@ -6,12 +6,12 @@ import SectionTwo from "@/components/sections/SectionTwo";
 
 export default function Home() {
   return (
-    <>
+    <main>
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
       <Footer />
-    </>
+    </main>
   )
 }
