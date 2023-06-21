@@ -1,0 +1,51 @@
+$outline: grey;
+$brownishGray: rgb(52,58,64);
+$mainBlue: #2248E2;
+$white: white;
+$black: black;
+$yellowish: #FFC107;
+$cyanish: #17A2B8;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+  }
+  a{text-decoration: none;}
+}
+body{
+  min-height: 100vh;
+
+  & > *{
+    outline: 1px dashed $outline;
+    min-height: 400px;
+  }
+}
+
+.SectionOne{
+  button{
+    padding: .7rem 1rem;
+    color: $white;
+    background: $mainBlue;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: .3rem;
+  }
+}
+.SectionTwo{
+  //
+}
+.SectionThree{
+  background: $mainBlue;
+}
+.SectionFour{
+  //
+}
+.Footer{
+  background: $brownishGray;
+}
