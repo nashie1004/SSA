@@ -164,6 +164,8 @@ main{
   }
 }
 .SectionFour{
+  padding-bottom: 15rem;
+
   h2,p:first-of-type{
     margin-inline: auto;
     text-align: center;
@@ -178,10 +180,9 @@ main{
     .ActionCard{
       background: $cyanish;
       border-radius: .8rem;
-      padding: 1rem;
+      padding: 1.5rem;
       flex: 1;
-      display: grid;
-      grid-template-columns: auto 1fr;
+      box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.2);
 
       div:first-of-type{
         display: grid;
@@ -206,13 +207,14 @@ main{
 
         h3, p, h6{
           color: $white;
-          text-align: left;
+          text-align: center;
         }
         h6{
           font-size: 1rem;
           font-weight: normal;
         }
         h3{
+          margin-top: -.7rem;
           font-size: 2rem;
         }
         p{
@@ -247,15 +249,18 @@ main{
       padding-inline: 6rem;
     }
   }
-  // .SectionTwo{
-  //   .LongCard{
-  //     gap: 3rem;
-  //   }
-  // }
   .SectionFour{
     .ActionCard{
       min-width: 500px;
       max-width: 700px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+
+      div:last-of-type{
+        h6,h3,p{
+          text-align: left !important;
+        }
+      }
     }    
   }
   .Footer{
