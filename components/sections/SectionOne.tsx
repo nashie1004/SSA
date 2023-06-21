@@ -4,7 +4,10 @@ export default function SectionOne() {
   return (
     <div className='SectionOne'>
       <nav>
-        <h3>@ Protoapp</h3>
+        <div id="navLogo"></div>
+        <h3>
+          Protoapp
+        </h3>
         <a href="#">Home</a>
       </nav>
       <div>
@@ -17,8 +20,8 @@ export default function SectionOne() {
         <button>Get Started</button>
       </div>
       <div className='mobileDownloadBtns'>
-        <p>google play btn</p>
-        <p>app store</p>
+        <div id="googlePlay"></div>
+        <div id="appStore"></div>
       </div>
     </div>
   )
